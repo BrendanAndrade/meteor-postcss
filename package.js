@@ -1,8 +1,8 @@
 Package.describe({
   summary: 'Minifier for Meteor with PostCSS processing - use Autoprefixer and others with ease',
-  version: '2.0.3',
-  name: 'juliancwirko:postcss',
-  git: 'https://github.com/juliancwirko/meteor-postcss.git'
+  version: '2.1',
+  name: 'hexsprite:postcss',
+  git: 'https://github.com/hexsprite/meteor-postcss.git'
 });
 
 Package.registerBuildPlugin({
