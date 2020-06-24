@@ -9,8 +9,8 @@ import Future from 'fibers/future';
 var sourcemap = Npm.require('source-map');
 
 checkNpmVersions({
-  'postcss': '^6.0.22',
-  'postcss-load-config': '^1.2.0'
+  'postcss': '^7.0.0',
+  'postcss-load-config': '^2.1.0'
 }, 'juliancwirko:postcss');
 
 var postCSS = require('postcss');
@@ -99,7 +99,12 @@ CssToolsMinifier.prototype.processFilesForBundle = function (files, options) {
         return;
     }
 
-    var minifiedFiles = CssTools.minifyCss(merged.code);
+    try {
+        var minifiedFiles = CssTools.minifyCss(merged.code);
+    } catch (err) {
+        console.error('Error while processing style sheet: ', err)
+        throw err
+    }
 
     if (files.length) {
         minifiedFiles.forEach(function (minified) {
