@@ -9,9 +9,9 @@ import Future from 'fibers/future';
 var sourcemap = Npm.require('source-map');
 
 checkNpmVersions({
-  'postcss': '^7.0.0',
-  'postcss-load-config': '^2.1.0'
-}, 'juliancwirko:postcss');
+  'postcss': '7.0.0',
+  'postcss-load-config': '2.1.0'
+}, 'hexsprite:postcss');
 
 var postCSS = require('postcss');
 var load = require('postcss-load-config');
