@@ -9,8 +9,8 @@ import Future from 'fibers/future';
 var sourcemap = Npm.require('source-map');
 
 checkNpmVersions({
-  'postcss': '8.0.0',
-  'postcss-load-config': '3.0.0'
+  'postcss': '^8.0.0',
+  'postcss-load-config': '^3.0.0'
 }, 'shankscoder:postcss');
 
 var postCSS = require('postcss');
