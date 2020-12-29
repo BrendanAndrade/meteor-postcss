@@ -11,7 +11,7 @@ var sourcemap = Npm.require('source-map');
 checkNpmVersions({
   'postcss': '^8.0.0',
   'postcss-load-config': '^3.0.0'
-}, 'shankscoder:postcss');
+}, 'brendanandrade:postcss');
 
 var postCSS = require('postcss');
 var load = require('postcss-load-config');
